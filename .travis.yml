@@ -8,7 +8,7 @@ addons:
     - doxygen-doc
     - doxygen-latex
     - doxygen-gui
-    - graphvis
+    - graphviz
 script:
 - doxygen Doxyfile
 - cmake .
