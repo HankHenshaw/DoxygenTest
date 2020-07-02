@@ -41,7 +41,7 @@ std::enable_if_t<std::is_integral<T>::value> printS(T& val)
  */
 
 template<typename T>
-std::enable_if_t<std::is_base_of_v<std::bidirectional_iterator_tag, typename std::iterator_traits<typename T::iterator>::iterator_category>> printS(const T& val)
+std::enable_if_t<std::is_base_of<std::bidirectional_iterator_tag, typename std::iterator_traits<typename T::iterator>::iterator_category>::value> printS(const T& val)
 {
     std::cout << "\nSTL containers\n";
     std::copy(std::begin(val), std::end(val), std::ostream_iterator<typename T::value_type>(std::cout, "."));
