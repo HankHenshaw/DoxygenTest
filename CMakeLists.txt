@@ -5,7 +5,7 @@ project(metapro VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 add_executable(meta main.cpp)
 
 set_target_properties(meta PROPERTIES
-    CXX_STANDARD 17
+    CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wall;-Wpedantic;-Wextra"
 )
