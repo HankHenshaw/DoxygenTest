@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(metapro VERSION 0.0.1$ENV{TRAVIS_BUILD_NUMBER})
+project(metapro VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_executable(meta main.cpp)
 
