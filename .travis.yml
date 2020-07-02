@@ -15,7 +15,7 @@ script:
 - cmake --build .
 - cmake --build . --target package
 deploy:
-  - provide: script
+  - provider: script
     skip_cleanup: true
     script:
       - curl -f -T metapro-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uhankhenshaw:$BINTRAY_API_KEY "https://api.bintray.com/content/hankhenshaw/MidRep/Sfinae/$TRAVIS_BUILD_NUMBER/metapro-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=xenial;deb_component=main;deb_architecture=amd64;publish=1"
